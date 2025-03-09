@@ -1,0 +1,100 @@
+/* src/App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+div {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+.dark input {
+  border-color: #555;
+  background-color: #444;
+  color: white;
+}
+
+.dark button {
+  background-color: #007bff;
+}
+
+.dark button:hover {
+  background-color: #0056b3;
+}
+
+.dark div {
+  background-color: #444;
+  border-color: #555;
+}
+
+/* Animation for task addition */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation for task removal */
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
