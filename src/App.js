@@ -1,12 +1,11 @@
 // src/App.js
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import TaskForm from './components/TaskForm'
 import TaskList from './components/TaskList'
 import './App.css'
 
 const App = () => {
   const [tasks, setTasks] = useState([])
-  const [darkMode, setDarkMode] = useState(false)
 
   // Load tasks from local storage on initial render
   useEffect(() => {
@@ -37,16 +36,9 @@ const App = () => {
     setTasks(newTasks)
   }
 
-  const toggleDarkMode = () => {
-    setDarkMode(prevMode => !prevMode)
-  }
-
   return (
-    <div className={`App ${darkMode ? 'dark-mode' : ''}`}>
+    <div className="App">
       <h1>Task Tracker</h1>
-      <button onClick={toggleDarkMode}>
-        {darkMode ? 'Light Mode' : 'Dark Mode'}
-      </button>
       <TaskForm addTask={addTask} />
       <TaskList
         tasks={tasks}
